@@ -16,6 +16,8 @@
 #define CKC_CEN LGUI(LALT(KC_C))
 #define CKC_LG LCTL(LALT(S(KC_RGHT)))
 #define CKC_SM LCTL(LALT(S(KC_LEFT)))
+#define CKC_NDSP LCTL(LGUI(LALT(KC_RGHT)))
+#define CKC_PDSP LCTL(LGUI(LALT(KC_LEFT)))
 
 enum custom_keycodes {
   CKC_PIPE = SAFE_RANGE,
@@ -59,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   LAYOUT(
     _______, CKC_SM,  _______, CKC_LG,  _______, _______, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______,
     RESET,   CKC_TOPL, CKC_TOP, CKC_TOPR, _______, _______, _______, _______, _______, _______, _______, _______, _______, CKC_PIPE,
-    _______, CKC_LFT, CKC_CEN, CKC_RGT, _______, _______, _______, _______, _______, _______, _______, _______, ___X___, _______,
+    _______, CKC_LFT, CKC_CEN, CKC_RGT, CKC_PDSP, CKC_NDSP, _______, _______, _______, _______, _______, _______, ___X___, _______,
     _______, ___X___, CKC_BOTL, CKC_BOT, CKC_BOTR, _______, _______, _______, _______, KC_MRWD, KC_MFFD, _______, ___X___, _______,
     _______, _______, _______,                   KC_MPLY,                            ___X___, _______, _______, _______, _______
   ),
