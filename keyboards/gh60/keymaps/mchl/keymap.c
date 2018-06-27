@@ -31,8 +31,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("|>");
                 return false;
             case CKC_LOREM:
-                SEND_STRING("Lorem ipsum dolor sit amet");
-                return false;    
+                SEND_STRING("Lorem ipsum dolor sit amet, consectetur adipiscing elit ");
+                return false;
         }
     }
     return true;
