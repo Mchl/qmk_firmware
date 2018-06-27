@@ -18,6 +18,8 @@
 #define CKC_SM LCTL(LALT(S(KC_LEFT)))
 #define CKC_NDSP LCTL(LGUI(LALT(KC_RGHT)))
 #define CKC_PDSP LCTL(LGUI(LALT(KC_LEFT)))
+#define CKC_HOME LGUI(KC_LEFT)
+#define CKC_END LGUI(KC_RGHT)
 
 enum custom_keycodes {
   CKC_PIPE = SAFE_RANGE,
@@ -51,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 1: arrows + movements */
   LAYOUT(
     KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  ___X___,
-    ___X___, ___X___, KC_UP,   ___X___, ___X___, ___X___, ___X___, ___X___, KC_INS,  ___X___, ___X___, KC_HOME, KC_END,  KC_PSCR,
+    ___X___, ___X___, KC_UP,   ___X___, ___X___, ___X___, ___X___, ___X___, KC_INS,  ___X___, ___X___, CKC_HOME, CKC_END,  KC_PSCR,
     _______, KC_LEFT, KC_DOWN, KC_RGHT, ___X___, ___X___, ___X___, ___X___, ___X___, ___X___, KC_PGUP, KC_PGDN, ___X___, _______,
     _______, ___X___, CKC_LOREM, KC_DEL, ___X___, ___X___, CKC_CTLB, ___X___, ___X___, ___X___, ___X___, ___X___, ___X___, _______,
     _______, _______, _______,                   ___X___,                            ___X___, _______, ___X___, _______, _______
